@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <servlet>
+    <servlet-name>xyz</servlet-name>
+    <servlet-class>com.servlets.MyServlet</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Sam</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>xyz</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <context-param>
+    <param-name>name</param-name>
+    <param-value>Ankit</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Phone</param-name>
+    <param-value>Realme</param-value>
+  </context-param>
+  <filter>
+    <display-name>IdFilter</display-name>
+    <filter-name>IdFilter</filter-name>
+    <filter-class>com.servlet.IdFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>IdFilter</filter-name>
+    <url-pattern>/add</url-pattern>
+  </filter-mapping>
+</web-app>
